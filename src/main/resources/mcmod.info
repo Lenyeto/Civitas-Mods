@@ -1,0 +1,16 @@
+[
+{
+  "modid": "civitasdomum",
+  "name": "Civitas Domom",
+  "description": "An instanced housing module for the Civitas Mods.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Lenyeto"],
+  "credits": "The Civitas Dev Team.",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
