@@ -1,21 +1,36 @@
 package com.civitas.domum;
 
+import com.civitas.domum.proxy.CommonProxy;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = CivitasDomumMod.MODID, version = CivitasDomumMod.VERSION, acceptableRemoteVersions = "*")
+@Mod(modid = References.MOD_ID, name = References.NAME, version = References.VERSION, acceptedMinecraftVersions = References.MC_VERSIONS)
 public class CivitasDomumMod 
 {
-	public static final String MODID = "Civitas Domum";
-	public static final String VERSION = "0.1a";
-	
-	@EventHandler
-	public void init(FMLInitializationEvent event)
-	{
-		//MinecraftForge.EVENT_BUS.register(new EventHandlerCommon());
-		
-	}
-	
+    @Mod.Instance
+	public static CivitasDomumMod instance;
+
+    @SidedProxy(clientSide = References.CLIENT_PROXY_CLASS, serverSide = References.SERVER_PROXY_CLASS)
+	public static CommonProxy proxy;
+
+    @EventHandler
+    public void preInit(FMLPreInitializationEvent e) {
+        System.out.println("Debug: PreInit fired.");
+    }
+
+    @EventHandler
+    public void init(FMLInitializationEvent e) {
+        System.out.println("Debug: Init fired.");
+    }
+
+    @EventHandler
+    public void postInit(FMLPostInitializationEvent e) {
+        System.out.println("Debug: PostInit fired.");
+    }
+
 }

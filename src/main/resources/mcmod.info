@@ -1,7 +1,7 @@
 [
 {
   "modid": "civitasdomum",
-  "name": "Civitas Domom",
+  "name": "Civitas Domum",
   "description": "An instanced housing module for the Civitas Mods.",
   "version": "${version}",
   "mcversion": "${mcversion}",
