@@ -3,7 +3,7 @@
   "modid": "civitasdomum",
   "name": "Civitas Domum",
   "description": "An instanced housing module for the Civitas Mods.",
-  "version": "${version}",
+  "version": "0.1a",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
